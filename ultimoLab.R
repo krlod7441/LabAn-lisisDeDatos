@@ -39,7 +39,7 @@ datos$ejecutiva.GERENCIA_RRPP <- ifelse(datos$ejecutiva == 'GERENCIA RR.PP.',1,0
 datos$ejecutiva.CARLA_BUZETA <- ifelse(datos$ejecutiva == 'CARLA.BUZETA',1,0)
 datos$ejecutiva.CAROLINA_GONZALEZ <- ifelse(datos$ejecutiva == 'CAROLINA.GONZALEZ',1,0)
 datos$ejecutiva.CAROLINA_MORA <- ifelse(datos$ejecutiva == 'CAROLINA.MORA',1,0)
-datos$ejecutiva.LUZ.HERNA <- ifelse(datos$ejecutiva == 'LUZ.HERNANDEZ',1,0)
+datos$ejecutiva.LUZ_HERNA <- ifelse(datos$ejecutiva == 'LUZ.HERNANDEZ',1,0)
 datos$ejecutiva.KATHIA_RAMIREZ <- ifelse(datos$ejecutiva == 'KATHIA.RAMIREZ',1,0)
 datos$ejecutiva.MARCELA_BARRA <- ifelse(datos$ejecutiva == 'MARCELA.BARRA',1,0)
 datos$ejecutiva.NO_ASIGNADO <- ifelse(datos$ejecutiva == 'NO ASIGNADO',1,0)
@@ -56,7 +56,7 @@ datos$ejecutiva.MARIA_CASTILLO <- ifelse(datos$ejecutiva == 'MARIA.CASTILLO',1,0
 datos$vendedor.VICTOR_FIGUEROA  <- ifelse(datos$vendedor == 'VICTOR FIGUEROA',1,0)
 datos$vendedor.VANESSA_MANDIOLA <- ifelse(datos$vendedor == 'VANESSA.MANDIOLA',1,0)
 datos$vendedor.TELE_VENTAS <- ifelse(datos$vendedor == 'TELE.VENTAS',1,0)
-datos$vendedor.TATIANA.SANMARTIN<- ifelse(datos$vendedor == 'TATIANA.SANMARTIN',1,0)
+datos$vendedor.TATIANA_SANMARTIN<- ifelse(datos$vendedor == 'TATIANA.SANMARTIN',1,0)
 datos$vendedor.SERGIO_VILLAROELZ <- ifelse(datos$vendedor == 'SERGIO.VILLAROEL',1,0)
 datos$vendedor.RODRIGO_NOVA <- ifelse(datos$vendedor == 'RODRIGO.NOVA',1,0)
 datos$vendedor.ARODRIGO_ARP<- ifelse(datos$vendedor == 'RODRIGO.ARP',1,0)
@@ -112,7 +112,7 @@ datos$vendedor.ALVARO_MARTINEZ <- ifelse(datos$vendedor == 'ALVARO.MARTINEZ',1,0
 datos$vendedor.ALEX_VERA <- ifelse(datos$vendedor == 'ALEX.VERA',1,0)
 datos$vendedor.ALEJANDRO_CORREA <- ifelse(datos$vendedor == 'ALEJANDRO.CORREA',1,0)
 datos$vendedor.ADRIAN_NORAMBUENA <- ifelse(datos$vendedor == 'ADRIAN NORAMBUENA',1,0)
-datos$vendedor.ADA.GARCIA <- ifelse(datos$vendedor == 'ADA.GARCIA',1,0)
+datos$vendedor.ADA_GARCIA <- ifelse(datos$vendedor == 'ADA.GARCIA',1,0)
 
 
 
