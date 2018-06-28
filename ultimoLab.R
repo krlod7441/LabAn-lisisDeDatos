@@ -1,4 +1,4 @@
-datos <- read.csv("./Escritorio/variables_PRE2.csv",header=TRUE, sep=";",dec=",")
+datos <- read.csv("./Escritorio/variables_PRE_fecha_balanceado.csv",header=TRUE, sep=";",dec=",")
 
 
 #cambiar el tipo de dato a algunas variables
