@@ -237,5 +237,99 @@ datos$cantidad_no_pagado = ((x)-min(x))/(max(x)-min(x))
 
 
 
+###analisis de agrupamiento
+
+library(cluster)
+library(factoextra)
+#fviz_nbclust(x = bank_mark, FUNcluster = pam, method = "silhouette",     diss = dist(bank_mark,method="euclidean"))
+
+
+  #definicion de cantidad de cluster manual
+
+
+#################################
+
+
+data_nor<-as.data.frame(scale(datos))
+
+#distancia euclideana
+distancia1<-dist(datos,method="euclidean")
+
+resultado_hclus=hclust(distancia1)
+print(resultado_hclus)
+
+plot(resultado_hclus, col='blue')
+
+
+hierarchical.clustering <- hclust(as.dist(distancia1))
+
+hclust.2 <- cutree(hierarchical.clustering,k=2)
+hclust.3 <- cutree(hierarchical.clustering,k=3)
+hclust.4 <- cutree(hierarchical.clustering,k=4)
+hclust.5 <- cutree(hierarchical.clustering,k=5)
+hclust.6 <- cutree(hierarchical.clustering,k=6)
+hclust.7 <- cutree(hierarchical.clustering,k=7)
+hclust.8 <- cutree(hierarchical.clustering,k=8)
+hclust.9 <- cutree(hierarchical.clustering,k=9)
+hclust.10 <- cutree(hierarchical.clustering,k=10)
+
+pam.2 <- pam(as.dist(distancia1),k=2,diss=TRUE)
+pam.3 <- pam(as.dist(distancia1),k=3,diss=TRUE)
+pam.4 <- pam(as.dist(distancia1),k=4,diss=TRUE)
+pam.5 <- pam(as.dist(distancia1),k=5,diss=TRUE)
+pam.6 <- pam(as.dist(distancia1),k=6,diss=TRUE)
+pam.7 <- pam(as.dist(distancia1),k=7,diss=TRUE)
+pam.8 <- pam(as.dist(distancia1),k=8,diss=TRUE)
+pam.9 <- pam(as.dist(distancia1),k=9,diss=TRUE)
+pam.10 <- pam(as.dist(distancia1),k=10,diss=TRUE)
+
+
+sil2 <- silhouette(hclust.2,dist=distancia1)
+sil3 <- silhouette(hclust.3,dist=distancia1)
+sil4 <- silhouette(hclust.4,dist=distancia1)
+sil5 <- silhouette(hclust.5,dist=distancia1)
+sil6 <- silhouette(hclust.6,dist=distancia1)
+sil7 <- silhouette(hclust.7,dist=distancia1)
+sil8 <- silhouette(hclust.8,dist=distancia1)
+sil9 <- silhouette(hclust.9,dist=distancia1)
+sil10 <- silhouette(hclust.10,dist=distancia1)
+
+hclust.sil.values <- c(summary(sil2)[["avg.width"]],summary(sil3)[["avg.width"]],summary(sil4)[["avg.width"]],summary(sil5)[["avg.width"]],summary(sil6)[["avg.width"]],summary(sil7)[["avg.width"]],summary(sil8)[["avg.width"]],summary(sil9)[["avg.width"]],summary(sil10)[["avg.width"]])
+
+sil2 <- silhouette(pam.2)
+sil3 <- silhouette(pam.3)
+sil4 <- silhouette(pam.4)
+sil5 <- silhouette(pam.5)
+sil6 <- silhouette(pam.6)
+sil7 <- silhouette(pam.7)
+sil8 <- silhouette(pam.8)
+sil9 <- silhouette(pam.9)
+sil10 <- silhouette(pam.10)
+
+pam.sil.values <- c(summary(sil2)[["avg.width"]],summary(sil3)[["avg.width"]],summary(sil4)[["avg.width"]],summary(sil5)[["avg.width"]],summary(sil6)[["avg.width"]],summary(sil7)[["avg.width"]],summary(sil8)[["avg.width"]],summary(sil9)[["avg.width"]],summary(sil10)[["avg.width"]])
+
+
+plot(sil2,main="Silueta PAM 2",border="blue")
+summary(sil2)
+plot(sil3,main="Silueta PAM 3",border="blue")
+summary(sil3)
+plot(sil4,main="Silueta PAM 4",border="blue")
+summary(sil4)
+plot(sil5,main="Silueta PAM 5",border="blue")
+summary(sil4)
+plot(sil6,main="Silueta PAM 6",border="blue")
+summary(sil4)
+plot(sil7,main="Silueta PAM 7",border="blue")
+summary(sil4)
+
+#mostrar el grafico....
+
+plot(2:10,pam.sil.values[2:10],type="o",col="blue",pch=0,xlab="Number of clusters",ylab="Mean Silhouette")
+#lines(2:10,hclust.sil.values[2:10],type="o",col="red",pch=1,xlab="",ylab="")
+#legend("topright",legend=c("PAM","HCLUST"),col=c("blue","red"),pch=c(0,1))
+legend("topright",legend=c("PAM"),col=c("blue"),pch=c(0,1))
+
+#mostrar el cluster
+clusplot(pam.2,color="TRUE")
 
 
