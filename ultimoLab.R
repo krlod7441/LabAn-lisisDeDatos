@@ -78,5 +78,125 @@ datos$vendedor.ADA_GARCIA <- ifelse(datos$vendedor == 'ADA GARCIA',1,0)
 
 
 
+########################################NORMALIZACION################
+
+
+#NORMALIZACION DE ano
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$ano
+#normalizaci?n de la variable 
+datos$ano = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE mes
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$mes
+#normalizaci?n de la variable 
+datos$mes = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE ant_meses
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$ant_meses
+#normalizaci?n de la variable 
+datos$ant_meses = ((x)-min(x))/(max(x)-min(x))
+
+
+
+#NORMALIZACION DE fac_net_fac
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$FacNetFac_..
+#normalizaci?n de la variable 
+datos$FacNetFac_.. = ((x)-min(x))/(max(x)-min(x))
+
+#NORMALIZACION DE PRIMA
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$PRIMA
+#normalizaci?n de la variable 
+datos$PRIMA = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE extra
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$EXTRA
+#normalizaci?n de la variable 
+datos$EXTRA = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE cantidad_transc
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$cantidad_transac
+#normalizaci?n de la variable 
+datos$cantidad_transac = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE monto_trans
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$monto_transac
+#normalizaci?n de la variable 
+datos$monto_transac = ((x)-min(x))/(max(x)-min(x))
+
+#NORMALIZACION DE fec_ing_dia
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$Fec_ing_Dia
+#normalizaci?n de la variable 
+datos$Fec_ing_Dia = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE fec_ing_mes
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$Fec_ing_Mes
+#normalizaci?n de la variable 
+datos$Fec_ing_Mes = ((x)-min(x))/(max(x)-min(x))
+
+#NORMALIZACION DE fec_ing_ano
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$Fec_ing_Ano
+#normalizaci?n de la variable 
+datos$Fec_ing_Ano = ((x)-min(x))/(max(x)-min(x))
+
+#NORMALIZACION DE cantidad_solicitudes
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$cantidad_solicitudes
+#normalizaci?n de la variable 
+datos$cantidad_solicitudes = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE suma_solicitudes
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$suma_solicitudes
+#normalizaci?n de la variable 
+datos$suma_solicitudes = ((x)-min(x))/(max(x)-min(x))
+
+
+#NORMALIZACION DE monto_pagado
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$monto_pagado
+#normalizaci?n de la variable 
+datos$monto_pagado = ((x)-min(x))/(max(x)-min(x))
+
+
+
+#NORMALIZACION DE monto_no_pagado
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$monto_no_pagado
+#normalizaci?n de la variable 
+datos$monto_no_pagado = ((x)-min(x))/(max(x)-min(x))
+
+#NORMALIZACION DE cantidad_pagado
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$cantidad_pagado
+#normalizaci?n de la variable 
+datos$cantidad_pagado = ((x)-min(x))/(max(x)-min(x))
+
+#NORMALIZACION DE cantidad_no_pagado
+#cambio a una variable temporal s?lo para la normalizaci?n
+x = datos$cantidad_no_pagado
+#normalizaci?n de la variable 
+datos$cantidad_no_pagado = ((x)-min(x))/(max(x)-min(x))
+
+
+
+
 
 
